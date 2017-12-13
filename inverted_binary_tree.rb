@@ -1,3 +1,4 @@
+
 def invert_binary_tree(root)
   return if root == nil
 
