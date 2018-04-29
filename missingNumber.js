@@ -16,12 +16,15 @@
 
 
 var missingNumber = function(nums) {
+    //find the sum of all numbers in array
     let sum = nums.reduce((acc, el) => acc + el)
 
+    // find the total of all numbers from 0..n
     let total = 0
     for (let i = 1; i <= nums.length; i++) {
         total += i
     }
 
+    //return the difference as the missing number
     return total - sum
 }
