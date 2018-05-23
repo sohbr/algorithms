@@ -48,16 +48,16 @@ function findDuplicate(nums) {
     fast = nums[nums[fast]];
   }
 
-  let finder = 0;
+  let third = 0;
 
-  while (slow !== finder) {
+  while (slow !== third) {
     slow = nums[slow];
-    finder = nums[finder];
+    third = nums[third];
   }
-
   return slow;
 }
 
 
-console.log(findDuplicate([1,3,4,2,2]));
-console.log(findDuplicate([3,1,3,4,2]));
+console.log(findDuplicate([4,1,6,6,6,2,3]));
+// console.log(findDuplicate([1,2,3,5,5,4]));
+// console.log(findDuplicate([3,1,3,4,2]));
