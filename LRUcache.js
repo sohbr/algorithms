@@ -74,33 +74,3 @@ LRUCache.prototype.put = function(key, value) {
     this.hash[key] = new listNode(value, key)
     let node = this.hash[key]
 
-    if (this.count === 0) {
-      this.head = this.hash[key]
-      this.tail = this.head
-    } else {
-      node = this.hash[key]
-      node.next = this.head
-      this.head.prev = node
-      this.head = node
-    }
-
-    this.count++
-
-    if (this.count > this.capacity) {
-      delete this.hash[this.tail.key]
-      this.tail = this.tail.prev
-      this.tail.next.prev = null
-      this.tail.next = null
-      this.count--
-    }
-  }
-}
-
-let cache = new LRUCache(2)
-
-cache.put(2, 1)
-cache.put(2, 2)
-cache.get(2)
-cache.put(1, 1)
-cache.put(4, 1)
-cache.get(2)
