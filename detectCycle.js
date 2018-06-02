@@ -31,3 +31,4 @@ a.next = b
 b.next = a
 
 console.log(detectCycle(a))
+
