@@ -42,11 +42,7 @@ LRUCache.prototype.get = function(key) {
   return this.hash[key].val
 }
 
-/**
- * @param {number} key
- * @param {number} value
- * @return {void}
- */
+
 LRUCache.prototype.put = function(key, value) {
   //if key exists in hash, reset value
   if (this.hash[key]) {
