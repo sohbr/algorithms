@@ -30,7 +30,6 @@ var climbStairs = function(n) {
   if (n === 2) return 2
 
   if (!stairs[n - 1]) stairs[n - 1] = climbStairs(n - 1)
-  if (!stairs[n - 2]) stairs[n - 2] = climbStairs(n - 2)
 
   return stairs[n - 1] + stairs[n - 2]
 }
